@@ -13,34 +13,27 @@
     <div class="container">
       <!-- Seção Topo -->
       <header class="topo">
-        <div class="logo">
-          <img src="img/kerigma.png" alt="Logo Escola Kerigma" />
-        </div>
         <nav>
           <ul>
-            <li><a href="../index.html" target="_self">Início</a></li>
-            <li><a href="livros.html" target="_self">Livros</a></li>
-            <li><a href="cursos.html" target="_self">Cursos</a></li>
-            <li><a href="saibamais.html" target="_self">Saiba Mais</a></li>
-            <li>
-              <a
-                href="https://wa.me/+5561985400682?text=Olá%20gostaria%20de%20mais%20informações"
+            <li><a href="../index.html" target="_self" class="btn-nav">Início</a></li>
+            <li><a href="livros.html" id="livros-link" target="_self" class="btn-nav">Livros</a></li>
+            <li><a href="cursos.html" id="cursos-link" target="_self" class="btn-nav">Cursos</a></li>
+            <li><a href="saibamais.html" id="saibamais-link" target="_self" class="btn-nav">Saiba Mais</a></li>
+            <li><a href="https://wa.me/+5561985400682?text=Olá%20gostaria%20de%20mais%20informações"
                 target="_blank"
+                aria-label="Entre em contato pelo WhatsApp"
               >
                 <button class="whatsapp-btn">WhatsApp</button>
               </a>
             </li>
           </ul>
         </nav>
-        <div class="logo">
-          <img src="img/logo.png" alt="Logo Escola Kerigma" />
-        </div>
       </header>
 
       <!-- Seção Centro -->
       <main class="centro">
         <section id="livros" class="section">
-          <h2>Nossos Livros</h2>
+          <h2>Nossos E-books</h2>
           <p>
             Explore nossos livros para aprofundar seu entendimento e fortalecer
             sua jornada de fé.
@@ -56,6 +49,7 @@
                 uma compreensão profunda dos eventos que, segundo as escrituras,
                 estão por vir.
               </p>
+              <h3>45,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
@@ -70,7 +64,7 @@
                 Este livro oferece orientações essenciais para o pregador,
                 preparando-o para uma vida ministerial de excelência e
                 dedicação, conforme as Escrituras.
-              </p>
+              </p><h3>45,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
@@ -85,31 +79,31 @@
                 Aprenda as principais abordagens para interpretar as escrituras
                 de maneira fiel, compreendendo o contexto histórico, cultural e
                 teológico dos textos bíblicos.
-              </p>
+              </p><h3>30,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
             <!-- Livro 4: 50 Esboços -->
             <div class="livro-card">
-              <img src="../img/50-esbocos.jpg" alt="Livro 50 Esboços" />
+              <img src="../img/50-esbocos.jpg" alt="Disponível para encomenda." />
               <h3>50 Esboços</h3>
               <p>
                 Um recurso essencial para pastores e pregadores, contendo 50
                 esboços de sermões prontos para serem aplicados em diversos
                 temas e ocasiões.
-              </p>
+              </p></p><h3>45,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
             <!-- Livro 5: Apóstolo Paulo -->
             <div class="livro-card">
-              <img src="../img/apostolo-paulo.jpg" alt="Livro Apóstolo Paulo" />
-              <h3>Apóstolo Paulo</h3>
+              <img src="../img/apostolo-paulo.jpg" alt="Disponível para encomenda." />
+              <h3>Apóstolo Paulo (vida, obra e teologia)</h3>
               <p>
                 Um mergulho na vida e obra do Apóstolo Paulo, destacando seu
                 papel fundamental na disseminação do evangelho e na formação das
                 primeiras igrejas cristãs.
-              </p>
+              </p></p><h3>50,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
@@ -117,40 +111,60 @@
             <div class="livro-card">
               <img
                 src="../img/seitas-heresia.jpg"
-                alt="Livro Seitas e Heresias"
+                alt="Disponível para encomenda."
               />
               <h3>Seitas e Heresias</h3>
               <p>
                 Com uma abordagem detalhada, este livro explora os perigos das
                 seitas e heresias, ajudando os leitores a identificar e evitar
                 práticas que se desviam da fé verdadeira.
-              </p>
+              </p></p><h3>30,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
-
+              <!-- Livro 6.1: O novo Nascimento -->
+              <div class="livro-card">
+              <img
+    src="../img/discipulado-novo-nascimento.jpg"
+    alt="Disponível para encomenda."
+  />
+  <h3>O novo Nascimento</h3>
+  <p>Explore os fundamentos da fé e como aplicá-los na vida cotidiana.</p>
+</p></p><h3>45,00</h3><p>Formato em PDF</p>
+  <button class="btn-comprar">Comprar</button>
+</div><!-- Livro 6.2: Capacitação Ministerial -->
+<div class="livro-card">
+  <img
+    src="../img/curso-cap-ministerial.jpg"
+    alt="Disponível para encomenda."
+  />
+  <h3>Capacitação Ministerial</h3>
+  <p>Uma visão completa da história da igreja e seus principais eventos.</p>
+</p></p><h3>45,00</h3><p>Formato em PDF</p>
+  <button class="btn-comprar">Comprar</button>
+</div>
             <!-- Livro 7: A Voz de Deus -->
             <div class="livro-card">
-              <img src="../img/a-voz-de-deus.jpg" alt="Livro A Voz de Deus" />
+              <img src="../img/a-voz-de-deus.jpg" alt="e-book, A Voz de Deus, Disponível para encomenda." />
               <h3>A Voz de Deus</h3>
               <p>
                 Descubra como ouvir e discernir a voz de Deus em meio ao caos do
                 mundo moderno, e como aplicar sua direção divina na vida diária.
-              </p>
-              <button class="btn-comprar">Comprar</button>
+              </p></p><h3>Indisponivel</h3><p>Formato em PDF</p>
+              <button class="btn-comprar">Indisponivel</button>
             </div>
 
             <!-- Livro 8: Combo Teologia 1 e 2 -->
             <div class="livro-card">
               <img
                 src="../img/combo-teologia1-2.jpg"
-                alt="Livro Combo Teologia 1 e 2"
+                alt="Combo Teologia 1 e 2, Disponível para encomenda."
               />
               <h3>Combo Teologia 1 e 2</h3>
               <p>
                 Este combo apresenta dois volumes essenciais para quem deseja
                 entender as bases da teologia cristã, explorando desde os
                 fundamentos até temas mais avançados.
-              </p>
+              </p><h3>250,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
 
@@ -158,14 +172,14 @@
             <div class="livro-card">
               <img
                 src="../img/combo-pregador.jpg"
-                alt="Livro Combo O Pregador"
+                alt="Combo O Pregador, Disponível para encomenda."
               />
               <h3>Combo O Pregador</h3>
               <p>
                 Este combo é um pacote completo para quem deseja se aprofundar
                 na arte da pregação, com materiais que abordam desde a
                 preparação do sermão até a prática da oratória.
-              </p>
+              </p><h3>100,00</h3><p>Formato em PDF</p>
               <button class="btn-comprar">Comprar</button>
             </div>
           </div>

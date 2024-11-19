@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+
 }
 
 body {
@@ -10,30 +12,68 @@ body {
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
-}
-
-/* Container Principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    display: flex;
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    margin: 0;
 }
 
 /* Topo */
 .topo {
-    background-color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/topo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 20px;
+    padding:5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    height: 500px; /* Ajuste conforme necessário */
+    min-height: 40vh; /* Ocupa 40% da altura da tela */
+
 }
 
-.topo .logo img {
-    width: 100px;
+/* Estilo dos links no menu */
+.btn-nav {
+    display: inline-block;
+    background: radial-gradient(circle, #0f84f1, #9c9c9c);
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.btn-nav:hover {
+
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: white;
+    font-size: 16px;
+    padding: 7px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    /* Cor do WhatsApp ao passar o mouse */
+}
+.topo .logo img ,
 .topo .kerigma img {
-    width: 150px;
+    width: 100px;
 }
 
 .topo nav ul {
@@ -45,47 +85,54 @@ body {
 .topo nav a {
     color: white;
     text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+.topo nav a:hover,
+.topo nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Botão de Login */
-.login-btn {
-    background-color: #f1c40f;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+/* Container Principal */
+.container {
+    width: 100%; /* Ocupa toda a largura */
+    margin: 0;
+    padding: 0 15px; /* Ajuste conforme necessário */
 }
 
 /* Centro (Conteúdo Principal) */
 .centro {
-    padding: 40px 0;
+    padding: 1px 0;
 }
 
 /* Alinhamento centralizado para títulos e textos */
-h2, h3 {
+h2,
+h3 {
     text-align: center;
     color: #333;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: clamp(24px, 4vw, 36px);
     margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: clamp(18px, 3vw, 28px);
     margin-bottom: 15px;
 }
 
 p {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     color: #666;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /* Containers de Cursos e Livros */
-.cursos-container, .livros-container {
+.cursos-container,
+.livros-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -94,23 +141,26 @@ p {
 }
 
 /* Card de Cursos e Livros */
-.curso-card, .livro-card {
+.curso-card,
+.livro-card {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
 }
 
-.curso-card img, .livro-card img {
+.curso-card img,
+.livro-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
 /* Botões */
-.btn-main, .btn-comprar {
+.btn-main,
+.btn-comprar {
     background-color: #f1c40f;
     padding: 10px 20px;
     border: none;
@@ -119,10 +169,14 @@ p {
     margin: 20px auto;
     font-size: 16px;
     border-radius: 5px;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-comprar:hover, .btn-main:hover {
+.btn-comprar:hover,
+.btn-main:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 /* Rodapé */
@@ -130,8 +184,10 @@ p {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: clamp(14px, 2vw, 16px);
+    border-top: 3px solid #f1c40f;
 }
 
 .rodape p {
@@ -186,7 +242,7 @@ section {
 /* Grid de Livros */
 .livros-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -209,19 +265,44 @@ section {
     color: #555;
     margin-bottom: 15px;
 }
-.whatsapp-btn {
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .cursos-container,
+    .livros-container {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topo nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .topo .logo img,
+    .topo .kerigma img {
+        width: 80px;
+    }
 }
 
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Cor do WhatsApp ao passar o mouse */
+@media (max-width: 480px) {
+    .btn-main {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .livro-card img,
+    .curso-card img {
+        max-width: 90%;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
 }

@@ -267,42 +267,98 @@ section {
 }
 
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+    /* Alinhamento horizontal dos cards */
+
     .cursos-container,
     .livros-container {
-        grid-template-columns: 1fr;
+        font-size: 10px;
+        display: flex;             /* Alinha os itens em uma linha */
+        flex-wrap: nowrap;         /* Impede que os itens quebrem para a próxima linha */
+        gap: 5px;                 /* Espaçamento entre os cards */
+        padding: 5px;             /* Espaçamento interno para os lados */
     }
 
-    .topo {
-        flex-direction: column;
-        text-align: center;
+    .curso-card,
+    .livro-card {font-size: 10px;
+        flex: 0 0 25%;             /* Cada card ocupa 70% da largura do container */
+        max-width: 25%;            /* Limita a largura do card */
+        height: auto;              /* Altura automática */
     }
 
-    .topo nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+    .btn-comprar,
+    .btn-main {
+        width: 40%;         /* Botões ocupam quase toda a largura do card */
+        font-size: 10px;    /* Ajusta a fonte */
+        padding: 8px 8px; /* Ajuste de preenchimento interno */
+    } /* Ajuste geral de textos */
+    h2 {
+        font-size: 9px; /* Reduz o tamanho do título principal */
     }
 
-    .topo .logo img,
-    .topo .kerigma img {
-        width: 80px;
+    h3 {
+        font-size: 6px; /* Títulos menores */
+    }
+
+    p {
+        font-size: 9px; /* Texto dos parágrafos reduzido */
+    }
+
+    /* Ajuste dos cards */
+    .curso-card h3,
+    .livro-card h3 {
+        font-size: 9px; /* Texto dos títulos nos cards */
+    }
+
+    .curso-card p,
+    .livro-card p {
+        font-size: 9px; /* Texto das descrições nos cards */
+    }
+
+    /* Rodapé */
+    .rodape p {
+        font-size: 12px; /* Texto menor no rodapé */
     }
 }
 
 @media (max-width: 480px) {
+    /* Ajuste para telas ainda menores */
+    .curso-card,
+    .livro-card {
+        flex: 0 0 80%;             /* Cada card ocupa 80% da largura */
+        max-width: 80%;            /* Limita a largura do card */
+    }
+
+    .btn-comprar,
     .btn-main {
-        font-size: 14px;
-        padding: 8px 16px;
+        font-size: 10px;   /* Reduz ainda mais a fonte */
+        padding: 8px 10px; /* Ajusta o preenchimento interno */
+    } /* Ajuste adicional para telas muito pequenas */
+    h2 {
+        font-size: 16px; /* Títulos principais ainda menores */
     }
 
-    .livro-card img,
-    .curso-card img {
-        max-width: 90%;
+    h3 {
+        font-size: 14px; /* Títulos menores */
     }
 
-    .btn-comprar {
-        width: 100%;
+    p {
+        font-size: 12px; /* Texto reduzido */
+    }
+
+    /* Ajuste dos cards */
+    .curso-card h3,
+    .livro-card h3 {
+        font-size: 14px; /* Texto dos títulos dos cards menor */
+    }
+
+    .curso-card p,
+    .livro-card p {
+        font-size: 10px; /* Texto das descrições reduzido */
+    }
+
+    /* Rodapé */
+    .rodape p {
+        font-size: 10px; /* Texto muito pequeno no rodapé */
     }
 }

@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease;
-
+    max-width: 100%;
 }
 
 body {
@@ -13,8 +13,11 @@ body {
     color: #333;
     line-height: 1.6;
     display: flex;
-    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    height: 100vh;
+    /* Faz o body ocupar toda a altura da tela */
     margin: 0;
+    font-size: calc(1rem + 0.5vw);
+    /* Cresce com a largura da tela */
 }
 
 /* Topo */
@@ -24,13 +27,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding:5px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 500px; /* Ajuste conforme necessário */
-    min-height: 40vh; /* Ocupa 40% da altura da tela */
-
+    height: 500px;
+    min-height: 40vh;
 }
 
 /* Estilo dos links no menu */
@@ -55,10 +57,9 @@ body {
 
 .whatsapp-btn {
     background-color: #25D366;
-    /* Cor do WhatsApp */
     color: white;
-    font-size: 16px;
-    padding: 7px 25px;
+    font-size: clamp(12px, 3vw, 16px);
+    padding: 10px clamp(10px, 4vw, 20px);
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -69,9 +70,9 @@ body {
 
 .whatsapp-btn:hover {
     background-color: #128C7E;
-    /* Cor do WhatsApp ao passar o mouse */
 }
-.topo .logo img ,
+
+.topo .logo img,
 .topo .kerigma img {
     width: 100px;
 }
@@ -89,6 +90,7 @@ body {
     border-radius: 50px;
     transition: background-color 0.3s ease;
 }
+
 .topo nav a:hover,
 .topo nav a:focus {
     background-color: rgba(255, 255, 255, 0.2);
@@ -96,9 +98,9 @@ body {
 
 /* Container Principal */
 .container {
-    width: 100%; /* Ocupa toda a largura */
+    padding: 5vw;
+    width: 100%;
     margin: 0;
-    padding: 0 15px; /* Ajuste conforme necessário */
 }
 
 /* Centro (Conteúdo Principal) */
@@ -269,95 +271,144 @@ section {
 @media (max-width: 768px) {
     /* Alinhamento horizontal dos cards */
 
+    nav ul {
+        display: none;
+        /* Esconde o menu padrão */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão hambúrguer */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Corta partes desnecessárias */
+    }
+
     .cursos-container,
     .livros-container {
         font-size: 10px;
-        display: flex;             /* Alinha os itens em uma linha */
-        flex-wrap: nowrap;         /* Impede que os itens quebrem para a próxima linha */
-        gap: 5px;                 /* Espaçamento entre os cards */
-        padding: 5px;             /* Espaçamento interno para os lados */
+        display: flex;
+        /* Alinha os itens em uma linha */
+        flex-wrap: nowrap;
+        /* Impede que os itens quebrem para a próxima linha */
+        gap: 5px;
+        /* Espaçamento entre os cards */
+        padding: 5px;
+        /* Espaçamento interno para os lados */
     }
 
     .curso-card,
-    .livro-card {font-size: 10px;
-        flex: 0 0 25%;             /* Cada card ocupa 70% da largura do container */
-        max-width: 25%;            /* Limita a largura do card */
-        height: auto;              /* Altura automática */
+    .livro-card {
+        font-size: 10px;
+        flex: 0 0 25%;
+        /* Cada card ocupa 70% da largura do container */
+        max-width: 25%;
+        /* Limita a largura do card */
+        height: auto;
+        /* Altura automática */
     }
 
     .btn-comprar,
     .btn-main {
-        width: 40%;         /* Botões ocupam quase toda a largura do card */
-        font-size: 10px;    /* Ajusta a fonte */
-        padding: 8px 8px; /* Ajuste de preenchimento interno */
-    } /* Ajuste geral de textos */
+        width: 40%;
+        /* Botões ocupam quase toda a largura do card */
+        font-size: 10px;
+        /* Ajusta a fonte */
+        padding: 8px 8px;
+        /* Ajuste de preenchimento interno */
+    }
+
+    /* Ajuste geral de textos */
     h2 {
-        font-size: 9px; /* Reduz o tamanho do título principal */
+        font-size: 9px;
+        /* Reduz o tamanho do título principal */
     }
 
     h3 {
-        font-size: 6px; /* Títulos menores */
+        font-size: 6px;
+        /* Títulos menores */
     }
 
     p {
-        font-size: 9px; /* Texto dos parágrafos reduzido */
+        font-size: 9px;
+        /* Texto dos parágrafos reduzido */
     }
 
     /* Ajuste dos cards */
     .curso-card h3,
     .livro-card h3 {
-        font-size: 9px; /* Texto dos títulos nos cards */
+        font-size: 9px;
+        /* Texto dos títulos nos cards */
     }
 
     .curso-card p,
     .livro-card p {
-        font-size: 9px; /* Texto das descrições nos cards */
+        font-size: 9px;
+        /* Texto das descrições nos cards */
     }
 
     /* Rodapé */
     .rodape p {
-        font-size: 12px; /* Texto menor no rodapé */
+        font-size: 12px;
+        /* Texto menor no rodapé */
     }
 }
 
 @media (max-width: 480px) {
+
     /* Ajuste para telas ainda menores */
     .curso-card,
     .livro-card {
-        flex: 0 0 80%;             /* Cada card ocupa 80% da largura */
-        max-width: 80%;            /* Limita a largura do card */
+        flex: 0 0 80%;
+        /* Cada card ocupa 80% da largura */
+        max-width: 80%;
+        /* Limita a largura do card */
     }
 
     .btn-comprar,
     .btn-main {
-        font-size: 10px;   /* Reduz ainda mais a fonte */
-        padding: 8px 10px; /* Ajusta o preenchimento interno */
-    } /* Ajuste adicional para telas muito pequenas */
+        font-size: 10px;
+        /* Reduz ainda mais a fonte */
+        padding: 8px 10px;
+        /* Ajusta o preenchimento interno */
+    }
+
+    /* Ajuste adicional para telas muito pequenas */
     h2 {
-        font-size: 16px; /* Títulos principais ainda menores */
+        font-size: 16px;
+        /* Títulos principais ainda menores */
     }
 
     h3 {
-        font-size: 14px; /* Títulos menores */
+        font-size: 14px;
+        /* Títulos menores */
     }
 
     p {
-        font-size: 12px; /* Texto reduzido */
+        font-size: 12px;
+        /* Texto reduzido */
     }
 
     /* Ajuste dos cards */
     .curso-card h3,
     .livro-card h3 {
-        font-size: 14px; /* Texto dos títulos dos cards menor */
+        font-size: 14px;
+        /* Texto dos títulos dos cards menor */
     }
 
     .curso-card p,
     .livro-card p {
-        font-size: 10px; /* Texto das descrições reduzido */
+        font-size: 10px;
+        /* Texto das descrições reduzido */
     }
 
     /* Rodapé */
     .rodape p {
-        font-size: 10px; /* Texto muito pequeno no rodapé */
+        font-size: 10px;
+        /* Texto muito pequeno no rodapé */
     }
 }

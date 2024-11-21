@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease;
-    max-width: 100%;
+
 }
 
 body {
@@ -14,10 +14,11 @@ body {
     line-height: 1.6;
     display: flex;
     height: 100vh;
-    /* Faz o body ocupar toda a altura da tela */
     margin: 0;
     font-size: calc(1rem + 0.5vw);
-    /* Cresce com a largura da tela */
+    height: 100%;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Topo */
@@ -98,14 +99,18 @@ body {
 
 /* Container Principal */
 .container {
-    padding: 5vw;
+    padding: 0, 1vw;
     width: 100%;
+    align-items: center;
+    max-width: 100vw;
+    min-width: none;
     margin: 0;
 }
 
 /* Centro (Conteúdo Principal) */
 .centro {
-    padding: 1px 0;
+    padding: 1vw 0;
+    align-items: center;
 }
 
 /* Alinhamento centralizado para títulos e textos */
@@ -222,6 +227,8 @@ p {
 /* Alinhamento da descrição e subtítulos */
 section {
     margin-bottom: 40px;
+    align-items: center;
+    width: 100;
 }
 
 /* Seção de Livros */
@@ -268,147 +275,161 @@ section {
     margin-bottom: 15px;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    /* Alinhamento horizontal dos cards */
 
-    nav ul {
-        display: none;
-        /* Esconde o menu padrão */
+    /* Mantém 3 cards por linha até 768px */
+    .livros-container,
+    .cursos-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .menu-toggle {
-        display: block;
-        /* Mostra o botão hambúrguer */
+    .livro-card,
+    .curso-card {
+        padding: 10px;
     }
 
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* Corta partes desnecessárias */
-    }
-
-    .cursos-container,
-    .livros-container {
-        font-size: 10px;
-        display: flex;
-        /* Alinha os itens em uma linha */
-        flex-wrap: nowrap;
-        /* Impede que os itens quebrem para a próxima linha */
-        gap: 5px;
-        /* Espaçamento entre os cards */
-        padding: 5px;
-        /* Espaçamento interno para os lados */
-    }
-
-    .curso-card,
-    .livro-card {
-        font-size: 10px;
-        flex: 0 0 25%;
-        /* Cada card ocupa 70% da largura do container */
-        max-width: 25%;
-        /* Limita a largura do card */
-        height: auto;
-        /* Altura automática */
-    }
-
-    .btn-comprar,
     .btn-main {
-        width: 40%;
-        /* Botões ocupam quase toda a largura do card */
-        font-size: 10px;
-        /* Ajusta a fonte */
-        padding: 8px 8px;
-        /* Ajuste de preenchimento interno */
+        font-size: 14px;
+        padding: 8px 15px;
     }
 
-    /* Ajuste geral de textos */
+    /* Ajuste nas fontes */
     h2 {
-        font-size: 9px;
-        /* Reduz o tamanho do título principal */
-    }
-
-    h3 {
-        font-size: 6px;
-        /* Títulos menores */
+        font-size: 1.8rem;
     }
 
     p {
-        font-size: 9px;
-        /* Texto dos parágrafos reduzido */
+        font-size: 1rem;
     }
 
-    /* Ajuste dos cards */
-    .curso-card h3,
-    .livro-card h3 {
-        font-size: 9px;
-        /* Texto dos títulos nos cards */
+    .livro-card h3,
+    .curso-card h3 {
+        font-size: 1.3rem;
     }
 
-    .curso-card p,
-    .livro-card p {
-        font-size: 9px;
-        /* Texto das descrições nos cards */
+    .livro-card h6,
+    .curso-card h6 {
+        font-size: 0.9rem;
     }
 
-    /* Rodapé */
-    .rodape p {
-        font-size: 12px;
-        /* Texto menor no rodapé */
+    .livro-card p,
+    .curso-card p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
 
-    /* Ajuste para telas ainda menores */
-    .curso-card,
-    .livro-card {
-        flex: 0 0 80%;
-        /* Cada card ocupa 80% da largura */
-        max-width: 80%;
-        /* Limita a largura do card */
+    /* Mantém 3 cards por linha até 480px */
+    .livros-container,
+    .cursos-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .btn-comprar,
+    .livro-card,
+    .curso-card {
+        padding: 8px;
+    }
+
     .btn-main {
-        font-size: 10px;
-        /* Reduz ainda mais a fonte */
-        padding: 8px 10px;
-        /* Ajusta o preenchimento interno */
+        font-size: 12px;
+        padding: 8px 12px;
     }
 
-    /* Ajuste adicional para telas muito pequenas */
+    /* Ajuste nas fontes e imagens */
     h2 {
-        font-size: 16px;
-        /* Títulos principais ainda menores */
-    }
-
-    h3 {
-        font-size: 14px;
-        /* Títulos menores */
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 12px;
-        /* Texto reduzido */
+        font-size: 0.9rem;
     }
 
-    /* Ajuste dos cards */
-    .curso-card h3,
-    .livro-card h3 {
-        font-size: 14px;
-        /* Texto dos títulos dos cards menor */
+    .livro-card h3,
+    .curso-card h3 {
+        font-size: 1.2rem;
     }
 
-    .curso-card p,
-    .livro-card p {
+    .livro-card h6,
+    .curso-card h6 {
+        font-size: 0.8rem;
+    }
+
+    .livro-card p,
+    .curso-card p {
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste nas imagens */
+    .livro-card img,
+    .curso-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 380px) {
+
+    /* Ajuste para 2 cards por linha e navegação vertical */
+    .livros-container,
+    .cursos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ajuste no padding dos cards */
+    .livro-card,
+    .curso-card {
+        padding: 5px;
+    }
+
+    /* Ajuste nas fontes e tamanhos */
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .livro-card h3,
+    .curso-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .livro-card h6,
+    .curso-card h6 {
+        font-size: 0.7rem;
+    }
+
+    .livro-card p,
+    .curso-card p {
+        font-size: 0.7rem;
+    }
+
+    .topo nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topo nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes no botão */
+    .btn-main {
         font-size: 10px;
-        /* Texto das descrições reduzido */
+        padding: 7px 10px;
+    }
+}
+
+/* Animação de slide do menu */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
     }
 
-    /* Rodapé */
-    .rodape p {
-        font-size: 10px;
-        /* Texto muito pequeno no rodapé */
+    to {
+        transform: translateX(0);
     }
 }

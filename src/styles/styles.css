@@ -6,7 +6,7 @@
     transition: all 0.3s ease;
 }
 
-body {
+/*body { /*desativado obs: erro com um scrow na lateral da tela principal, gerando um espaço desnessesario.!
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
@@ -18,7 +18,7 @@ body {
     height: 100%;
     width: 100%;
     max-width: 100vw;
-}
+}*/
 
 /* Topo */
 .topo {

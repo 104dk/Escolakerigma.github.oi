@@ -11,141 +11,232 @@
   <body>
     <!-- Container Principal -->
     <div class="container">
+      <div class="imagemCabecalho"></div>
       <!-- Seção Topo -->
       <header class="topo">
         <nav>
           <ul>
-            <li><a href="index.html" id="index-link" target="_self" class="btn-nav">Início</a></li>
-            <li><a href="livros.html" id="livros-link" target="_self" class="btn-nav">Livros</a></li>
-            <li><a href="cursos.html" id="cursos-link" target="_self" class="btn-nav">Cursos</a></li>
-            <li><a href="saibamais.html" id="saibamais-link" target="_self" class="btn-nav">Saiba Mais</a></li>
-            <li><a href="https://wa.me/+5561985400682?text=Olá%20gostaria%20de%20mais%20informações" 
-                  target="_blank" 
-                  aria-label="Entre em contato pelo WhatsApp">
-                  <button class="whatsapp-btn">WhatsApp</button>
-                </a>
+            <li><a href="#inicio" class="btn-nav">Início</a></li>
+            <li><a href="#livros" class="btn-nav">Livros</a></li>
+            <li><a href="#cursos" class="btn-nav">Cursos</a></li>
+            <li><a href="#saibamais" class="btn-nav">Saiba Mais</a></li>
+            <li>
+              <a
+                href="https://wa.me/+5561985400682?text=Olá%20gostaria%20de%20mais%20informações"
+                target="_blank"
+                aria-label="Entre em contato pelo WhatsApp"
+              >
+                <button class="whatsapp-btn">WhatsApp</button>
+              </a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <!-- Conteúdo Principal -->
+      <!-- Seção Centro -->
       <main class="centro">
-        
-        <!-- Seção Home -->
-        <section id="home" class="section">
-          <h2>Bem-vindo à Escola Kerigma</h2>
-          <p>Explore nossos cursos e livros para expandir seu conhecimento!</p>
-        </section>
-
-        <!-- Livros em Destaque -->
+        <!-- Seção Livros -->
         <section id="livros" class="section">
-          <h2>Destaques</h2>
-          <div class="livros-container">
-
-            <article class="livro-card">
-              <img src="img/discipulado-novo-nascimento.jpg" alt="Capa do livro 'O Novo Nascimento'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>O novo Nascimento</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article>
-
-            <article class="livro-card">
-              <img src="img/curso-cap-ministerial.jpg" alt="Capa do livro 'Capacitação Ministerial'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Capacitação Ministerial</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article>
-
-            <article class="livro-card">
-              <img src="img/apostolo-paulo.jpg" alt="Capa do livro 'Apóstolo Paulo'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Apóstolo Paulo (vida, obra e teologia)</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article>
-
-
-            <article class="livro-card">
-              <img src="img/escatologia.jpg" alt="Capa do livro 'Apóstolo Paulo'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Escatologia</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article> 
-
-            <article class="livro-card">
-              <img src="img/escatologia.jpg" alt="Capa do livro 'Apóstolo Paulo'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Escatologia</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article> 
-
-            <article class="livro-card">
-              <img src="img/escatologia.jpg" alt="Capa do livro 'Apóstolo Paulo'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Escatologia</h3>
-              <button class="btn-main">
-                <a href="livros.html" target="_self">PDF</a>
-              </button>
-            </article>
-
-          </div>
-
-          <button class="btn-main">
-            <a href="livros.html" target="_self">Ver Todos os Livros</a>
-          </button>
+          <h2>Nossos E-books</h2>
+          <p>
+            Explore nossos livros para aprofundar seu entendimento e fortalecer
+            sua jornada de fé.
+          </p>
+          <div class="livros-container" id="livros-container"></div>
         </section>
 
-        <!-- Cursos em Destaque -->
+        <!-- Seção Cursos -->
         <section id="cursos" class="section">
-          <h2>Cursos em Destaque</h2>
-          <div class="cursos-container">
-
-            <article class="curso-card">
-              <img src="img/seitas-heresia.jpg" alt="Curso 'Seitas e Heresias'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Seitas e Heresias</h3>
-              <p>Entenda as práticas de seitas e heresias nos dias atuais.</p>
-            </article>
-
-            <article class="curso-card">
-              <img src="img/50-esbocos.jpg" alt="Curso '50 Esboços'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>50 Esboços</h3>
-              <p>50 esboços prontos para a aplicação de sermões.</p>
-            </article>
-
-            <article class="curso-card">
-              <img src="img/escatologia.jpg" alt="Curso 'Escatologia'" />
-              <h6>PDF ou Apostila</h6>
-              <h3>Escatologia</h3>
-              <p>Estude os eventos e acontecimentos do Apocalipse.</p>
-            </article>
-
-          </div>
-          <button class="btn-main">
-            <a href="cursos.html" target="_self">Explorar Cursos</a>
-          </button>
+          <h2>Nossos Cursos</h2>
+          <p>
+            Explore nossos cursos para aprofundar seus conhecimentos bíblicos e
+            desenvolver habilidades ministeriais.
+          </p>
+          <div class="cursos-container" id="cursos-container"></div>
         </section>
 
+        <!-- Seção Saiba Mais -->
+        <section id="saibamais" class="section">
+          <h2>Saiba Mais sobre a Escola Kerigma</h2>
+          <p>
+            A Escola Kerigma foi fundada com o objetivo de oferecer educação
+            cristã de qualidade, preparando líderes para a disseminação da
+            Palavra de Deus.
+          </p>
+
+          <h3>Missão</h3>
+          <p>
+            Nossa missão é capacitar cristãos para que possam exercer sua fé de
+            maneira eficaz e impactante, oferecendo formação teológica,
+            ministerial e prática.
+          </p>
+
+          <h3>Visão</h3>
+          <p>
+            Queremos ser uma instituição reconhecida por formar líderes
+            comprometidos com a verdade bíblica e com o avanço do Reino de Deus
+            no mundo.
+          </p>
+
+          <h3>Valores</h3>
+          <ul>
+            <li>Compromisso com a Palavra de Deus</li>
+            <li>Excelência na formação teológica e prática</li>
+            <li>Desenvolvimento contínuo dos alunos</li>
+            <li>Dedicação ao serviço cristão</li>
+            <li>
+              <a
+                href="https://wa.me/+5561985400682?text=Olá%20gostaria%20de%20mais%20informações"
+                target="_blank"
+              >
+                <button class="whatsapp-btn">WhatsApp</button>
+              </a>
+            </li>
+          </ul>
+        </section>
       </main>
 
-      <!-- Rodapé -->
+      <!-- Seção Rodapé -->
       <footer class="rodape">
         <p>© 2024 Escola Kerigma. Todos os direitos reservados.</p>
       </footer>
     </div>
+    <!-- Fim do Container Principal -->
 
     <!-- Scripts -->
     <script src="src/script/script.js"></script>
+    <script>
+      // Dados para Livros e Cursos
+      const livros = [
+        {
+          img: "../img/escatologia.jpg",
+          titulo: "Escatologia",
+          descricao:
+            "Explore as profecias bíblicas sobre o fim dos tempos e obtenha uma compreensão profunda dos eventos que, segundo as escrituras, estão por vir.",
+          preco: "45,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/50-esbocos.jpg",
+          titulo: "50 Esboços",
+          descricao:
+            "Um recurso essencial para pastores e pregadores, contendo 50 esboços de sermões prontos para serem aplicados em diversos temas e ocasiões.",
+          preco: "45,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/apostolo-paulo.jpg",
+          titulo: "Apóstolo Paulo",
+          descricao:
+            "Um mergulho na vida e obra do Apóstolo Paulo, destacando seu papel fundamental na disseminação do evangelho e na formação das primeiras igrejas cristãs.",
+          preco: "50,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/interpretacao-biblica.jpg",
+          titulo: "Interpretação Bíblica",
+          descricao:
+            "Aprenda as principais abordagens para interpretar as escrituras de maneira fiel, compreendendo o contexto histórico, cultural e teológico dos textos bíblicos.",
+          preco: "30,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/pregador-aprovado.jpg",
+          titulo: "Pregador Aprovado",
+          descricao:
+            "Este livro oferece orientações essenciais para o pregador, preparando-o para uma vida ministerial de excelência e dedicação, conforme as Escrituras.",
+          preco: "45,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/seitas-heresia.jpg",
+          titulo: "Seitas e Heresias",
+          descricao:
+            "Com uma abordagem detalhada, este livro explora os perigos das seitas e heresias, ajudando os leitores a identificar e evitar práticas que se desviam da fé verdadeira.",
+          preco: "30,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/discipulado-novo-nascimento.jpg",
+          titulo: "O Novo Nascimento",
+          descricao:
+            "Discipulado com os fundamentos da fé cristã aplicados à vida cotidiana, fundamental para novos menbros do corpo de cristo.",
+          preco: "45,00",
+          formato: "Formato em PDF",
+        },
+        //-- Combos de Livros --
+        {
+          img: "../img/teologia-basico-1.jpg",
+          titulo: "Teologia vol. 1",
+          descricao:
+            "Bibliologia, pentateuco, livros historicos, livros poeticos e livros profeticos.",
+          preco: "150,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/teologia-basico-2.jpg",
+          titulo: "Teologia vol. 2",
+          descricao:
+            "Evangelhos, historia da igreja, paracletologia, cartas paulinas, cartas gerais e Escatologia.",
+          preco: "150,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/combo-pregador.jpg",
+          titulo: "Combo O Pregador",
+          descricao:
+            "Este combo é um pacote completo para quem deseja se aprofundar na arte da pregação, com materiais que abordam desde a preparação do sermão até a prática da oratória.",
+          preco: "100,00",
+          formato: "Formato em PDF",
+        },
+        {
+          img: "../img/a-voz-de-deus.jpg",
+          titulo: "A voz de DEUS",
+          descricao:
+            "Devocional, como ouvir a voz de Deus, em meio a tantos barulhos você esta pronto para ouvir a voz de Deus ?.",
+          preco: "25,00",
+          formato: "Formato em PDF",
+        },
+      ];
+
+      const cursos = [
+        {
+          img: "../img/curso-cap-ministerial.jpg",
+          titulo: "Capacitação Ministerial",
+          preco: "150,00",
+          descricao:
+            " A chamada para o santo ministerio, vocação, obreiro como ministro da palavra, um curso que vai lhe ajudar na compreensão do chamado com clareza e eficácia.",
+        },
+        {
+          img: "../img/combo-teologia1-2.jpg",
+          titulo: "Curso de Teologia",
+          preco: "250,00",
+          descricao:
+            "Curso completo sobre teologia cristã, dois modulos ajudando na compreensão da Bíblia, todos os 66 livros, Este combo apresenta dois volumes essenciais para quem deseja entender as bases da teologia cristã, explorando desde os fundamentos até temas mais avançados aborddos num total de 11 disciplinas.",
+        },
+      ];
+
+      // Função para Renderizar Livros e Cursos
+      function renderizarItens(itens, containerId) {
+        const container = document.getElementById(containerId);
+        itens.forEach((item) => {
+          const card = `
+            <div class="item-card">
+              <img src="${item.img}" alt="${item.titulo}" />
+              <h3>${item.titulo}</h3>
+              <p>${item.descricao}</p>
+              ${item.preco ? `<h3>${item.preco}</h3>` : ""}
+              ${item.formato ? `<p>${item.formato}</p>` : ""}
+              <button class="btn-comprar">Comprar</button>
+            </div>
+          `;
+          container.innerHTML += card;
+        });
+      }
+
+      // Renderizar Livros e Cursos
+      renderizarItens(livros, "livros-container");
+      renderizarItens(cursos, "cursos-container");
+    </script>
   </body>
 </html>
